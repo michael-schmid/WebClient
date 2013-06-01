@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jsRender Demos</title>
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/jsrender.js"></script>
+</head>
+<body>
+
+    <h2>Render from string</h2>
+    <table id="jsrenderTable">     </table>
+
+    <script>
+        /* Compile markup as named templates */
+        $.templates({
+            titleTemplate: "<tr><td colspan=3>{{>name}}</td></tr>",
+            detailTemplate: "<tr><td>{{>name}}</td><td>Released: {{>releaseYear}}</td><td>director: {{>director}}</td></tr>"
+        });
+
+        var movies = [
+		{ name: "The Red Violin", releaseYear: "1998", director: "François Girard" },
+		{ name: "Eyes Wide Shut", releaseYear: "1999", director: "Stanley Kubrick" },
+		{ name: "The Inheritance", releaseYear: "1976", director: "Mauro Bolognini" }
+        ];
+
+        var details;
+
+        function switchTemplates()
+        {
+            var html,
+                button = $("#switchBtn");
+
+            details = !details;
+
+            /* Render using the other named template */
+            if (details)
+            {
+                html = $.render.detailTemplate(movies);
+            } else
+            {
+                html = $.render.titleTemplate(movies);
+            }
+            $("#jsrenderTable").html(html);
+        }
+
+        // $("#switchBtn").click(switchTemplates);
+
+        switchTemplates();
+
+    </script>
+</body>
+</html>
