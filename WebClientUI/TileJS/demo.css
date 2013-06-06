@@ -1,0 +1,45 @@
+body {
+	padding: 20px; font-family: Arial;
+}
+.grid {
+	margin: 10px 0px; border: 10px solid rgb(221, 221, 221); width: 95%; height: 600px; clear: both; position: relative; -ms-overflow-x: hidden; -ms-overflow-y: scroll; background-color: rgb(221, 221, 221);
+}
+.grid > div {
+	position: absolute; background-color: rgb(255, 255, 255);
+}
+.slider {
+	margin: 0px 10px; width: 200px; display: inline-block;
+}
+.sliderLabel {
+	font-size: 18px; font-weight: bold;
+}
+.dev-tile-number {
+	padding: 10px; font-size: 36px;
+}
+.dev-tile-size {
+	padding: 10px; font-size: 36px;
+}
+.dev-tiles-templates ul {
+	margin-bottom: 10px;
+}
+.dev-template {
+	background: url("dev-tiles-sprite.png") no-repeat; height: 35px; margin-right: 20px; display: inline-block; cursor: pointer;
+}
+.selected.dev-template {
+	
+}
+.dev-l1 {
+	width: 47px;
+}
+.dev-l2 {
+	width: 47px;
+}
+.dev-l3 {
+	width: 39px;
+}
+.dev-l4 {
+	width: 39px;
+}
+.dev-l5 {
+	width: 47px; margin-right: 0px;
+}
